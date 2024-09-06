@@ -1,0 +1,126 @@
+.home-banner-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    margin: auto;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .home-banner-slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-width: 1220px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: transform 2s ease, opacity 2s ease;
+  }
+
+  .from-left {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .from-right {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .home-banner-slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInFromLeft 2s forwards;
+  }
+  
+  .home-banner-slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInFromRight 2s forwards;
+  }
+  
+  .home-banner-slide-out-left {
+    transform: translateX(0);
+    animation: slideOutToLeft 2s forwards;
+  }
+  
+  .home-banner-slide-out-right {
+    transform: translateX(0);
+    animation: slideOutToRight 2s forwards;
+  }
+  
+  .home-banner-content {
+    display: flex;
+    height: 500px;
+    width: 100%;
+  }
+  
+  .fighter-infos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+  
+  .fighter-infos > span:first-of-type {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .img-fighter-container {
+    width: 40%;
+  }
+  
+  .img-fighter-container > img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOutToLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideOutToRight {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
